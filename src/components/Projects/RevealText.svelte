@@ -10,7 +10,7 @@
 	export let span;
 	export let text;
 
-	const observer = new IntersectionObserver((entries, observer) => {
+	const observer = new IntersectionObserver((entries) => {
 		if (entries[0].isIntersecting && !animationPlayed) {
 			animate = true;
 			animationPlayed = true;

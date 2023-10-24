@@ -2,7 +2,6 @@
 	import LeftRight from '../LeftRight.svelte';
 	import zarf from '../../images/svg/zarf.svg';
 	import zarfPlatform from '../../images/svg/zarf-platform.svg';
-	import checkMark from '../../images/svg/check-mark.svg';
 	import Cards from './Cards.svelte';
 	import eclipse from '../../images/svg/eclipse.svg';
 	import folder from '../../images/svg/zarf-card-imgs/folder.svg';

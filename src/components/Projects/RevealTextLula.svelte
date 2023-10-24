@@ -1,6 +1,6 @@
 <script>
 	import { fade, fly } from 'svelte/transition';
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount} from 'svelte';
 
 	let animate = false;
 	let targetElement;

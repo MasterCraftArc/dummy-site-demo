@@ -1,12 +1,13 @@
 <script>
 	import { fade, fly } from 'svelte/transition';
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 
 	let animate = false;
 	let targetElement;
 	let spanElement;
 	export let span;
 	export let text;
+	let observer;
 
 	onMount(() => {
 		observer = new IntersectionObserver((entries) => {
