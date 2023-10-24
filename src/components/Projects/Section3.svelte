@@ -16,7 +16,7 @@
 	import MobileSection3 from './mobile/MobileSection3.svelte';
 	import platform from '../../images/svg/projects-hero/leapfrog/platform.svg';
 	import leapfrog from '../../images/svg/projects-hero/leapfrog/leapfrog.svg';
-	import RevealImgLeft from './RevealImgLeft.Svelte';
+	import RevealImgLeft from './RevealImgLeft.svelte';
 	import RevealCheckMarkR from './RevealCheckMarkR.svelte';
 	import RevealTextLeapfrog from './RevealTextLeapfrog.svelte';
 
