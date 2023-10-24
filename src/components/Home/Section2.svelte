@@ -3,7 +3,6 @@
 	import badges from '../../images/svg/company-badges.svg';
 	import glow from '../../images/svg/section-3-glow.svg';
 	import mobileBadges from '../../images/svg/mobile-badges.svg';
-	import { fade } from 'svelte/transition';
 
 	$: innerWidth = 0;
 </script>

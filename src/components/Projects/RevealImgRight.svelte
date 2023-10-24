@@ -1,21 +1,18 @@
 <script>
-	import zarf from '../../images/svg/zarf.svg';
-	import zarfPlatform from '../../images/svg/zarf-platform.svg';
 	import { onMount, onDestroy } from 'svelte';
 	import { fly } from 'svelte/transition';
-	import { backInOut } from 'svelte/easing';
 
 	let animate = false;
 	let targetElement;
 	let animationPlayed = false;
-	export let character
-	export let platform
+	export let character;
+	export let platform;
 
-	const observer = new IntersectionObserver((entries, observer) => {
+	const observer = new IntersectionObserver((entries) => {
 		if (entries[0].isIntersecting && !animationPlayed) {
 			animate = true;
 			animationPlayed = true;
-		} 
+		}
 	});
 
 	onMount(() => {

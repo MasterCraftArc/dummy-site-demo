@@ -4,7 +4,7 @@
 	import glow from '../../images/svg/section-3-glow.svg';
 	import yellowGlow from '../../images/svg/yellow-glow.svg';
 	import blueGlow from '../../images/svg/blue-glow.svg';
-	import { fade } from 'svelte/transition';
+
 	$: innerWidth = 0;
 </script>
 

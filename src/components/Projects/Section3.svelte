@@ -1,6 +1,6 @@
 <script>
 	import LeftRight from '../LeftRight.svelte';
-	import checkMark from '../../images/svg/check-mark.svg';
+
 	import Cards from './Cards.svelte';
 	import eclipse from '../../images/svg/eclipse.svg';
 	import Imgs from './img-orientation/imgs.svelte';
@@ -8,7 +8,7 @@
 	import greenGlow from '../../images/svg/product-glows/leapfrog-card-glow.svg';
 	import Button from '../Button.svelte';
 	import Star from '../../images/svg/star.svg';
-	import Leapfrog from '../../images/svg/leapfrog.svg';
+
 	import ai from '../../images/svg/leapfrog-card-imgs/ai.svg';
 	import computer from '../../images/svg/leapfrog-card-imgs/computer.svg';
 	import cube from '../../images/svg/leapfrog-card-imgs/cube.svg';
@@ -118,17 +118,6 @@
 		}
 	}
 
-	.leapfrog {
-		height: 200px;
-		width: 200px;
-		animation: bounce 2s infinite;
-	}
-	.platform {
-		height: 300px;
-		width: 300px;
-		margin-top: -170px;
-	}
-
 	h3 {
 		text-align: left;
 	}
@@ -168,13 +157,6 @@
 		display: flex;
 		justify-content: space-evenly;
 		width: 100vw;
-	}
-
-	.text-div {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 1rem;
 	}
 
 	.links {
@@ -239,19 +221,9 @@
 		align-items: center;
 	}
 
-	.check-mark {
-		width: 30px;
-		height: 30px;
-	}
-
 	@media (max-width: 1200px) {
 		h3 {
 			font-size: 24px;
-		}
-
-		.check-mark {
-			width: 25px;
-			height: 25px;
 		}
 
 		.card {

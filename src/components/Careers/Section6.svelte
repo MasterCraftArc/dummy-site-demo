@@ -1,6 +1,5 @@
 <script>
 	import doug from '../../images/svg/doug.svg';
-	import CardGlow from '../Home/CardGlow.svelte';
 	import zarfGlow from '../../images/svg/product-glows/zarf-header-glow.svg';
 </script>
 

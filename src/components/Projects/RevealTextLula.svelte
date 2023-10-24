@@ -8,11 +8,11 @@
 	export let span;
 	export let text;
 
-	const observer = new IntersectionObserver((entries, observer) => {
+	const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
 				animate = true;
-			} 
+			}
 		});
 	});
 
@@ -23,7 +23,6 @@
 			observer.disconnect();
 		};
 	});
-
 </script>
 
 <div bind:this={targetElement} class:animate class="lines">

@@ -8,9 +8,10 @@
 	let targetElement;
 	let animationPlayed = false; // Add this variable to track if animation has played or not
 
-	const observer = new IntersectionObserver((entries, observer) => {
+	const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
-			if (entry.isIntersecting && !animationPlayed) { // Check if the animation has not been played yet
+			if (entry.isIntersecting && !animationPlayed) {
+				// Check if the animation has not been played yet
 				animate = true;
 				animationPlayed = true; // Set the flag to indicate animation has been played
 			}

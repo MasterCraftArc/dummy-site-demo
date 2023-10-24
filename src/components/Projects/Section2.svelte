@@ -112,10 +112,6 @@
 		padding-bottom: 7rem;
 	}
 
-	.zarf {
-		animation: float 3s infinite;
-	}
-
 	h3 {
 		text-align: left;
 	}
@@ -143,14 +139,6 @@
 
 	section {
 		gap: 10rem;
-	}
-
-	.text-div {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		gap: 1rem;
 	}
 
 	.links {
@@ -205,17 +193,6 @@
 		flex-direction: column;
 	}
 
-	.zarf {
-		width: 200px;
-		height: 200px;
-	}
-	.zarf-platform {
-		width: 200px;
-		height: 200px;
-		z-index: -1;
-		margin-top: -2rem;
-	}
-
 	h3 {
 		padding-top: 1rem;
 	}
@@ -226,19 +203,9 @@
 		align-items: center;
 	}
 
-	.check-mark {
-		width: 30px;
-		height: 30px;
-	}
-
 	@media (max-width: 1200px) {
 		h3 {
 			font-size: 24px;
-		}
-
-		.check-mark {
-			width: 25px;
-			height: 25px;
 		}
 
 		.card {

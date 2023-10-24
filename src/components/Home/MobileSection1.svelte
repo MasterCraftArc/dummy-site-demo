@@ -1,9 +1,5 @@
 <script>
 	import Button from '../Button.svelte';
-	import TypeWriter1 from '../TypeWriter1.svelte';
-	let whiteheader = ['Defense Unicorns is a', 'Modern Software Prime'];
-	let glowing = 'Modern Software Prime';
-	import { fade } from 'svelte/transition';
 </script>
 
 <section class="mobile-section">

@@ -1,8 +1,6 @@
 <script>
 	import InternalButton from '../InternalButton.svelte';
-	import hero from '../../images/svg/products-hero/products-hero.svg';
-	import zarfGlow from '../../images/svg/product-glows/zarf-header-glow.svg';
-	import ColorCube from './ColorCube.svelte';
+
 	import headerGlow from '../../images/svg/product-glows/header-glow.svg';
 	import characters from '../../images/svg/projects-hero/characters.svg';
 	import frams from '../../images/svg/projects-hero/Frams.svg';
@@ -97,36 +95,10 @@
 		gap: 2rem;
 	}
 
-	.text-container {
-		padding-top: 7rem;
-		padding-bottom: 7rem;
-	}
-
-	.hero {
-		width: 800px;
-		height: 600px;
-		z-index: 2;
-		position: relative;
-	}
-
 	@media screen and (max-width: 1200px) {
 		h1 {
 			width: 350px;
 			min-height: 100px;
-		}
-	}
-
-	@media screen and (max-width: 800px) {
-		.hero {
-			width: 500px;
-			height: 500px;
-		}
-	}
-
-	@media screen and (max-width: 500px) {
-		.hero {
-			width: 300px;
-			height: 300px;
 		}
 	}
 </style>

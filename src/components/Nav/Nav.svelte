@@ -8,7 +8,6 @@
 	let scrolled = false;
 
 	let innerWidth = 0;
-	$: isMobile = innerWidth < 1200;
 
 	function handleScroll() {
 		scrolled = window.scrollY > 0;

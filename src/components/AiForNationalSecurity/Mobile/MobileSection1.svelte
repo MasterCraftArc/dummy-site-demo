@@ -2,9 +2,6 @@
 	import LeftRight from '../../LeftRight.svelte';
 	import ai from '../../../images/svg//ai-for-national-security/ai-for-national-security.svg';
 	import Button from '../../../components/Button.svelte';
-	import CardGlow from '../../Home/CardGlow.svelte';
-	import headerGlow from '../../../images/svg/product-glows/zarf-header-glow.svg';
-	import blueGlow from '../../../images/svg/product-glows/zarf-card-glow.svg';
 </script>
 
 <section>

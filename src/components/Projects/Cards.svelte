@@ -1,49 +1,50 @@
 <script>
 	export let title = '';
 	export let text = '';
-	import { fade } from "svelte/transition";
-	import { onMount } from "svelte";
+	import { fade } from 'svelte/transition';
+	import { onMount } from 'svelte';
 
-  let card;
-  let observer;
+	let card;
+	let observer;
 
-  onMount(() => {
-    observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("fade-in");
-          observer.unobserve(entry.target);
-        }
-      });
-    });
+	onMount(() => {
+		observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('fade-in');
+					observer.unobserve(entry.target);
+				}
+			});
+		});
 
-    observer.observe(card);
+		observer.observe(card);
 
-    return () => {
-      observer.disconnect();
-    };
-  });
+		return () => {
+			observer.disconnect();
+		};
+	});
 </script>
 
 <div class="container" bind:this={card}>
-<div class="card" transition:fade>
-	<div class="img-container">
-		<slot name="img1" />
-	</div>
-	<div class="text-container">
-		<div class="title">
-			<slot name="title">
-				<h3>{title}</h3>
-			</slot>
+	<div class="card" transition:fade>
+		<div class="img-container">
+			<slot name="img1" />
 		</div>
-		<div class="text">
-			<slot name="text">
-				<p>{text}</p>
-			</slot>
+		<div class="text-container">
+			<div class="title">
+				<slot name="title">
+					<h3>{title}</h3>
+				</slot>
+			</div>
+			<div class="text">
+				<slot name="text">
+					<p>{text}</p>
+				</slot>
+			</div>
 		</div>
 	</div>
 </div>
-</div>
+
 <style>
 	.text-container {
 		display: flex;

@@ -2,7 +2,7 @@
 	import LeftRight from '../LeftRight.svelte';
 	import pepr from '../../images/svg/pepr.svg';
 	import peprPlatform from '../../images/svg/pepr-platform.svg';
-	import checkMark from '../../images/svg/check-mark.svg';
+
 	import Cards from './Cards.svelte';
 	import eclipse from '../../images/svg/eclipse.svg';
 	import Imgs from './img-orientation/imgs.svelte';
@@ -19,7 +19,7 @@
 	import RevealCheckMarkL from './RevealCheckMarkL.svelte';
 	import RevealTextPepr from './RevealTextPepr.svelte';
 	import RevealImgRight from './RevealImgRight.svelte';
-	import RevealCheckMarkR from './RevealCheckMarkR.svelte';
+
 	$: innerWidth = 0;
 </script>
 
@@ -146,13 +146,6 @@
 		gap: 10rem;
 	}
 
-	.text-div {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 1rem;
-	}
-
 	.links {
 		padding-top: 3rem;
 		display: flex;
@@ -205,18 +198,6 @@
 		flex-direction: column;
 	}
 
-	.pepr {
-		width: 250px;
-		height: 250px;
-		animation: float 2s infinite;
-	}
-	.pepr-platform {
-		width: 250px;
-		height: 250px;
-		z-index: -1;
-		margin-top: -5rem;
-	}
-
 	h3 {
 		padding-top: 1rem;
 	}
@@ -227,20 +208,11 @@
 		align-items: center;
 	}
 
-	.check-mark {
-		width: 30px;
-		height: 30px;
-	}
-
 	@media (max-width: 1200px) {
 		h3 {
 			font-size: 24px;
 		}
 
-		.check-mark {
-			width: 25px;
-			height: 25px;
-		}
 		.card {
 			flex-direction: column;
 			display: flex;

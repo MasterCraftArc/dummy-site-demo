@@ -5,7 +5,7 @@
 	import security from '../../images/svg/software-factory/secure.svg';
 	import office from '../../images/svg/software-factory/office.svg';
 	import api from '../../images/svg/software-factory/api.svg';
-	import { fade } from 'svelte/transition';
+
 	let currentImage = security;
 	let fadeIn = false;
 

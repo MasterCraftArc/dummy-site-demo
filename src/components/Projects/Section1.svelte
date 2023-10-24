@@ -1,12 +1,8 @@
 <script>
 	import InternalButton from '../InternalButton.svelte';
 	import hero from '../../images/svg/products-hero/products-hero.svg';
-	import zarfGlow from '../../images/svg/product-glows/zarf-header-glow.svg';
 	import ColorCube from './ColorCube.svelte';
 	import headerGlow from '../../images/svg/product-glows/header-glow.svg';
-	import characters from '../../images/svg/projects-hero/characters.svg';
-	import frams from '../../images/svg/projects-hero/Frams.svg';
-	import heroBG from '../../images/svg/projects-hero/hero-bg.svg';
 
 	import MobileSection1 from './mobile/MobileSection1.svelte';
 	$: innerWidth = 0;
@@ -70,11 +66,6 @@
 		align-items: center;
 		flex-direction: column;
 		gap: 2rem;
-	}
-
-	.text-container {
-		padding-top: 7rem;
-		padding-bottom: 7rem;
 	}
 
 	.hero {

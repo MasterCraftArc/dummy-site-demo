@@ -1,7 +1,6 @@
 <script>
 	import InternalButton from '../InternalButton.svelte';
 	import MobileSection1 from './MobileSection1.svelte';
-	import { fade } from 'svelte/transition';
 	$: innerWidth = 0;
 </script>
 

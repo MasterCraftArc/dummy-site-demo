@@ -1,6 +1,6 @@
 <script>
 	import LeftRight from '../LeftRight.svelte';
-	import checkMark from '../../images/svg/check-mark.svg';
+
 	import Cards from './Cards.svelte';
 	import eclipse from '../../images/svg/eclipse.svg';
 	import CardGlow from '../Home/CardGlow.svelte';
@@ -139,13 +139,6 @@
 		width: 100vw;
 	}
 
-	.text-div {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 1rem;
-	}
-
 	.links {
 		padding-top: 3rem;
 		display: flex;
@@ -198,17 +191,6 @@
 		flex-direction: column;
 	}
 
-	.lula {
-		width: 250px;
-		height: 250px;
-		animation: float 2s infinite;
-	}
-
-	.lula-platform {
-		width: 300px;
-		height: auto;
-	}
-
 	h3 {
 		padding-top: 1rem;
 	}
@@ -219,20 +201,11 @@
 		align-items: center;
 	}
 
-	.check-mark {
-		width: 30px;
-		height: 30px;
-	}
-
 	@media (max-width: 1200px) {
 		h3 {
 			font-size: 24px;
 		}
 
-		.check-mark {
-			width: 25px;
-			height: 25px;
-		}
 		.card {
 			flex-direction: column;
 			display: flex;
