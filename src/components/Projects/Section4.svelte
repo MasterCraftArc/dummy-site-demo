@@ -1,0 +1,252 @@
+<script>
+	import LeftRight from '../LeftRight.svelte';
+	import pepr from '../../images/svg/pepr.svg';
+	import peprPlatform from '../../images/svg/pepr-platform.svg';
+	import checkMark from '../../images/svg/check-mark.svg';
+	import Cards from './Cards.svelte';
+	import eclipse from '../../images/svg/eclipse.svg';
+	import Imgs from './img-orientation/imgs.svelte';
+	import CardGlow from '../Home/CardGlow.svelte';
+	import cardGlow from '../../images/svg/product-glows/pepr-card-glow.svg';
+	import Button from '../Button.svelte';
+	import Star from '../../images/svg/star.svg';
+	import connected from '../../images/svg/pepr-card-imgs/connected.svg';
+	import settings from '../../images/svg/pepr-card-imgs/settings.svg';
+	import gears from '../../images/svg/pepr-card-imgs/gears.svg';
+	import peprGlow from '../../images/svg/product-glows/pepr-header-glow.svg';
+	import Imgs2 from './img-orientation/imgs2.svelte';
+	import MobileSection4 from './mobile/MobileSection4.svelte';
+	import RevealCheckMarkL from './RevealCheckMarkL.svelte';
+	import RevealTextPepr from './RevealTextPepr.svelte';
+	import RevealImgRight from './RevealImgRight.svelte';
+	import RevealCheckMarkR from './RevealCheckMarkR.svelte';
+	$: innerWidth = 0;
+</script>
+
+<svelte:window bind:innerWidth />
+{#if innerWidth < 1200}
+	<MobileSection4 />
+{:else}
+	<section class="section4">
+		<div>
+			<div class="h1-container">
+				<img src={peprGlow} alt="header-glow" loading="lazy" class="glow" />
+				<RevealTextPepr span="Pepr" text="- Kubernetes Middleware for Systems Integration" />
+			</div>
+			<LeftRight>
+				<div slot="left" class="left">
+					<RevealCheckMarkL text="Automatically integrate your COTS or GOTS application" />
+					<RevealCheckMarkL text="Reduce human in the loop IT Ops checklists" />
+					<RevealCheckMarkL
+						text="IT domain expertise as code so your mission system survives changeovers"
+					/>
+					<RevealCheckMarkL text="Makes systems of systems integration easy" />
+				</div>
+				<div slot="right" class="right">
+					<RevealImgRight character={pepr} platform={peprPlatform} />
+				</div>
+			</LeftRight>
+		</div>
+
+		<div>
+			<div class="h1-container">
+				<img src={peprGlow} alt="header-glow" loading="lazy" class="glow" />
+				<h1>Use <span>Pepr</span> To</h1>
+			</div>
+			<div class="cards">
+				<div class="card-glow"><CardGlow glowLeft={cardGlow} glowRight={cardGlow} /></div>
+				<div class="card">
+					<Cards>
+						<span slot="img1" class="eclipse"><Imgs2 background={eclipse} img={connected} /></span>
+						<span slot="title"><h3>Create Robust Policy Engines</h3></span>
+						<span slot="text"
+							><p>
+								Codify security policy into corrective Pepr modules that can identify and remediate
+								risk through automatically enforcing K8s best practices.
+							</p></span
+						>
+					</Cards>
+					<Cards>
+						<span slot="img1" class="eclipse"><Imgs background={eclipse} img={settings} /></span>
+						<span slot="title"><h3>Seamlessly Connect Applications</h3></span>
+						<span slot="text"
+							><p>
+								Automate the integration of mission capabilities into complex systems with Pepr
+								modules that are reusable across multiple systems.
+							</p></span
+						>
+					</Cards>
+					<Cards>
+						<span slot="img1" class="eclipse"><Imgs background={eclipse} img={gears} /></span>
+						<span slot="title"><h3>Automate K8 Scripts</h3></span>
+						<span slot="text"
+							><p>
+								Remove the need for human intervention when issues arise in the cluster or
+								application, by using Pepr modules to remediate the event.
+							</p></span
+						>
+					</Cards>
+				</div>
+				<div />
+			</div>
+			<div class="links">
+				<div class="a-tag">
+					<a href="https://github.com/defenseunicorns/pepr" target="_blank">
+						<img src={Star} alt="" loading="lazy" class="star" /> Star us on Github</a
+					>
+				</div>
+				<Button text="Learn More" link="https://pepr.dev/" />
+			</div>
+		</div>
+	</section>
+{/if}
+
+<style>
+	h3 {
+		text-align: left;
+	}
+	.h1-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.glow {
+		position: absolute;
+		z-index: -1;
+	}
+
+	.h1-container h1 {
+		position: relative;
+		z-index: 1;
+	}
+
+	h1 span {
+		color: #d34768;
+		text-shadow: 0 0 5px #d34768;
+	}
+
+	h1 {
+		padding-bottom: 7rem;
+	}
+
+	section {
+		gap: 10rem;
+		padding-top: 0;
+	}
+
+	.card {
+		display: flex;
+		justify-content: space-evenly;
+		width: 100vw;
+	}
+
+	section {
+		padding-top: 0;
+		gap: 10rem;
+	}
+
+	.text-div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.links {
+		padding-top: 3rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.star {
+		height: 15px;
+		width: 15px;
+	}
+
+	.a-tag {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem;
+	}
+
+	.a-tag:hover {
+		border-radius: 25px;
+		background-color: rgba(255, 255, 255, 0.1);
+		cursor: pointer;
+	}
+
+	.card-glow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+	.left {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 2rem;
+		max-width: 45vw;
+	}
+
+	.right {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.pepr {
+		width: 250px;
+		height: 250px;
+		animation: float 2s infinite;
+	}
+	.pepr-platform {
+		width: 250px;
+		height: 250px;
+		z-index: -1;
+		margin-top: -5rem;
+	}
+
+	h3 {
+		padding-top: 1rem;
+	}
+
+	.cards {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.check-mark {
+		width: 30px;
+		height: 30px;
+	}
+
+	@media (max-width: 1200px) {
+		h3 {
+			font-size: 24px;
+		}
+
+		.check-mark {
+			width: 25px;
+			height: 25px;
+		}
+		.card {
+			flex-direction: column;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			gap: 3rem;
+		}
+	}
+</style>
